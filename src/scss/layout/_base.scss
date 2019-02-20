@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    outline: 0;
+    box-sizing: inherit;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    font-family: sans-serif;
+
+    &.fonts-loaded {
+        font-family: $font-family;
+    }
+}
+
+body, html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba($color: #000, $alpha: 0.004);
+    font-size: 100%;
+    color: $color-txt;
+    min-width: 320px;
+    font-family: $font-family;
+}
+
+body {
+    -ms-overflow-style: scrollbar;
+}
+
+@at-root {
+  @-ms-viewport { width: device-width }
+}
+
+img { max-width: 100% }
+
+img.of-fill {
+	object-fit: fill;
+	font-family: 'object-fit: fill';
+}
+img.of-contain {
+	object-fit: contain;
+	font-family: 'object-fit: contain';
+}
+img.of-cover {
+	object-fit: cover;
+	font-family: 'object-fit: cover';
+}
+img.of-none {
+	object-fit: none;
+	font-family: 'object-fit: none';
+}
+img.of-scaleDown {
+	object-fit: scale-down;
+	font-family: 'object-fit: scale-down';
+}
+
+// h1, .h1 { @include fluid-sizing('font-size', $h1-size); }
+// h2, .h2 { @include fluid-sizing('font-size', $h2-size); }
+// h3, .h3 { @include fluid-sizing('font-size', $h3-size); }
+
